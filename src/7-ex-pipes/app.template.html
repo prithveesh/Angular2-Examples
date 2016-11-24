@@ -1,0 +1,32 @@
+<h1>{{title}}</h1>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th (click)="sortBy = 'id'">
+                    ID
+                </th>
+                <th (click)="sortBy = 'name'">
+                    Name
+                </th>
+                <th (click)="sortBy = 'age'">
+                    Age
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of (list | orderby: [sortBy])">
+                <td>
+                    {{user.id}}
+                </td>
+                <td>
+                    {{user.name | uppercase}}
+                </td>
+                <td>
+                    {{user.age}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

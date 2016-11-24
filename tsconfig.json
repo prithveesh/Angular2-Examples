@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "outDir": "./js",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "*",
+                "node_modules",
+                "src/app/*"
+            ]
+        }
+    }
+}

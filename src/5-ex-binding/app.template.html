@@ -1,0 +1,29 @@
+<div class="container col-xs-12">
+    <h1>{{title}}</h1>
+    <div class="container-fluid">
+        <div class="section">
+            <h3>{{value}}</h3>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="section">
+            <h3>Event Binding</h3>
+            <button (click)="toggleButton()">Toggle Button</button>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="section">
+            <h3>Property Binding</h3>
+            <button [disabled]="isDisabled">Click Here</button>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="section">
+            <h3>Two Way Binding</h3>
+            <input [(ngModel)]="inputValue" />
+            <p>
+              {{inputValue}}
+            </p>
+        </div>
+    </div>
+</div>

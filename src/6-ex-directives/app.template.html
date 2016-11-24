@@ -1,0 +1,34 @@
+<h1>{{title}}</h1>
+
+<div [class]="isPanel ? classPanel : classContainer" [style.background]="'lime'" (click)="isPanel = !isPanel">
+    Attribute Directives - {{isPanel ? classPanel : classContainer | uppercase}}
+</div>
+
+<div class="container" myHighlight>
+    Custom Attribute Directives - My Highlight
+</div>
+
+<div class="container" [style.background]="'#AAA'">
+    <p>
+      Structural Directives: Ng If
+    </p>
+    <button (click)="toggleNgIfPanel = !toggleNgIfPanel" class="btn btn-primary">Click Toggle</button>
+    <span class="container-fluid" *ngIf="toggleNgIfPanel">
+        Panel Toggle
+    </span>
+</div>
+
+<div class="container" [style.background]="'antiquewhite'">
+    <p>
+      Structural Directives: Ng Switch
+    </p>
+    <button (click)="status ='in-mission'" class="btn btn-primary">In Mission</button>
+    <button (click)="status ='ready'" class="btn btn-primary">Ready</button>
+    <button (click)="status ='randomValue'" class="btn btn-primary">Random</button>
+
+    <div [ngSwitch]="status">
+        <template [ngSwitchCase]="'in-mission'">In Mission</template>
+        <template [ngSwitchCase]="'ready'">Ready</template>
+        <template ngSwitchDefault>Unknown</template>
+    </div>
+</div>
